@@ -1,5 +1,7 @@
 package com.navinski.service;
 
-public class AddNews {
+public interface AddNews {
+
+	void addNews();
 
 }

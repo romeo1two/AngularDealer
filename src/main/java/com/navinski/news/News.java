@@ -1,24 +1,72 @@
 package com.navinski.news;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 public class News {
 	// 50 symbols - main title
-	String mainTitle = new String();
+	private String mainTitle;
 	// 230 symbols short-title
-	String shortTitle = new String();
+	private String shortTitle;;
 	// 5000 symbols-  news text (content)
-	String newsText = new String();
+	private String newsText;
 	// author (one or more)
-	String author = new String();
+	private String author;
 	// the date of publishing
-	LocalDateTime date = LocalDateTime.now();
+	LocalDateTime date;
 	// the main photo
 	
 	// the list of attached tags
-	List<String> listTags = new ArrayList<>();
+	Tags tags;
 	//comment
-	String comments = new String();
+	Comments comments;
+	
+	
+	public String getMainTitle() {
+		return mainTitle;
+	}
+	public void setMainTitle(String mainTitle) {
+		this.mainTitle = mainTitle;
+	}
+	
+	public String getShortTitle() {
+		return shortTitle;
+	}
+	public void setShortTitle(String shortTitle) {
+		this.shortTitle = shortTitle;
+	}
+	
+	public String getNewsText() {
+		return newsText;
+	}
+	public void setNewsText(String newsText) {
+		this.newsText = newsText;
+	}
+	
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	
+	public LocalDateTime getDate() {
+		return date;
+	}
+	public void setDate(LocalDateTime date) {
+		this.date = date;
+	}
+	public Tags getTags() {
+		return tags;
+	}
+	public void setTags(Tags tags) {
+		this.tags = tags;
+	}
+	
+	public Comments getComments() {
+		return comments;
+	}
+	public void setComments(Comments comments) {
+		this.comments = comments;
+	}
+	
 }
