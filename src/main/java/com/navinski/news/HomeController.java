@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Handles requests for the application home page.
@@ -36,4 +37,46 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping(value = "/addNews")
+	public String addNews(@RequestParam(value="authorName", required=false, defaultValue="Valera") String authorName, Model model) {
+		logger.info("News Addition goes for {}.");
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		model.addAttribute("authorName", authorName );
+		
+		return "addNews";
+	}
+	
+	@RequestMapping(value = "/editNews")
+	public String editNews(Model model) {
+		logger.info("News Editing goes for {}.");
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "editNews";
+	}
+	
+	@RequestMapping(value = "/newsList")
+	public String newsList(Model model) {
+		logger.info("News List returned per request {}.");
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "newsList";
+	}
 }
