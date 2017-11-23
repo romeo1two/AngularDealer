@@ -39,7 +39,7 @@ public class HomeController {
 	
 	@RequestMapping(value = "/addNews")
 	public String addNews(@RequestParam(value="authorName", required=false, defaultValue="Valera") String authorName, Model model) {
-		logger.info("News Addition goes for {}.");
+		
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
@@ -49,12 +49,12 @@ public class HomeController {
 		model.addAttribute("serverTime", formattedDate );
 		model.addAttribute("authorName", authorName );
 		
+		logger.info("News Addition goes at - " + formattedDate);
 		return "addNews";
 	}
 	
 	@RequestMapping(value = "/editNews")
 	public String editNews(Model model) {
-		logger.info("News Editing goes for {}.");
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
@@ -62,6 +62,8 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
+		
+		logger.info("News Editin goes at - " + formattedDate);
 		
 		return "editNews";
 	}
