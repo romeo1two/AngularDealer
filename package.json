@@ -1,0 +1,23 @@
+{
+  "name": "angulardealer",
+  "version": "1.0.0",
+  "description": "Test project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romeo1two/AngularDealer.git"
+  },
+  "keywords": [
+    "test",
+    "example"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/romeo1two/AngularDealer/issues"
+  },
+  "homepage": "https://github.com/romeo1two/AngularDealer#readme"
+}
