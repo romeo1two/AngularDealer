@@ -16,7 +16,7 @@
           <td>{{ i + 1 }}</td>
           <td>{{ item.make }}</td>
           <td>{{ item.model }}</td>
-          <td><input type="checkbox" [(ngModel)]="item.done" /></td>
+          <td><input type="checkbox" [(ngModel)]="item.stock" /></td>
           <td [ngSwitch]="item.stock">
               <span *ngSwitchCase="true">Yes</span>
               <span *ngSwitchDefault>No</span>

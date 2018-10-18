@@ -11,7 +11,7 @@ export class AppComponent {
         return this.model.user;
     }
     getTodoItems() {
-        return this.model.items.filter(item => !item.done);
+        return this.model.items.filter(item => !item.stock);
     }
     addItem(newItem) {
         if (newItem != "") {
